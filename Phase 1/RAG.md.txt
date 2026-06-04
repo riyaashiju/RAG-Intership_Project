@@ -1,0 +1,5 @@
+# What is RAG and Why is it Useful?
+
+RAG (Retrieval-Augmented Generation) is a technique that combines information retrieval with a Large Language Model (LLM) to generate accurate and context-aware responses. Instead of relying only on the knowledge already present in the model, RAG first retrieves relevant information from documents or a knowledge base and then uses that information to answer the user's question. This helps the model provide responses based on specific data rather than only its pre-trained knowledge.
+
+RAG is useful because it improves the accuracy and reliability of AI systems. It reduces the chances of incorrect or outdated answers and allows chatbots to work with custom documents, PDFs, and organizational knowledge. In a RAG system, documents are converted into embeddings, similarity search is used to find relevant information, and the retrieved content is provided to the language model to generate the final response. This makes RAG highly effective for question-answering and chatbot applications.
