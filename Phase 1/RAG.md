@@ -1,4 +1,4 @@
-\# What is RAG and Why is it Useful?
+\ What is RAG and Why is it Useful?
 
 RAG (Retrieval-Augmented Generation) is a technique that combines information retrieval with a Large Language Model (LLM) to generate accurate and context-aware responses. Instead of relying only on the knowledge already present in the model, RAG first retrieves relevant information from documents or a knowledge base and then uses that information to answer the user's question. This helps the model provide responses based on specific data rather than only its pre-trained knowledge.
 
