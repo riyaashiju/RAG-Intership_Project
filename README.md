@@ -4,45 +4,40 @@ This repository contains my internship work for building a Retrieval-Augmented G
 
 * Groq LLMs
 * Gemini Embeddings
-* LangChain
+* LangGraph
 * ChromaDB
 * Streamlit
 
----
+## Phase 1 Progress
 
-# Phase 1 Progress
+### Completed Tasks
 
-## Completed Tasks
-
-* Groq API configured successfully
+* Groq API configured and tested successfully
 * Gemini API configured successfully
 * Google Colab environment setup completed
-* First AI completion notebook implemented
 * GitHub repository setup completed
-* Sentence embeddings generated successfully
-* Embedded 20 sentences using transformer embeddings
+* Generated embeddings for 20 sentences
+* Generated query embeddings
 * Implemented cosine similarity search
-* Performed semantic similarity analysis between sentences
-* Explored vector-based retrieval concepts
+* Implemented top-5 similarity retrieval
+* Explored semantic similarity using embeddings
+* Created a short note on RAG and its usefulness
+* Designed the RAG pipeline architecture using Excalidraw
+* Selected LangGraph as the development framework
 
----
-
-# Key Learnings
+### Key Learnings
 
 * Understanding of embeddings and vector representations
 * Semantic similarity using cosine similarity
+* Query retrieval using embedding search
 * Basics of Retrieval-Augmented Generation (RAG)
 * API integration using Groq and Gemini
 * GitHub project management and documentation
 
----
-
-# Internship Start Date
+## Internship Start Date
 
 02 June 2026
 
----
-
-# Mentor
+## Mentor
 
 Ajith Hariharan
