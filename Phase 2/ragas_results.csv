@@ -1,0 +1,21 @@
+question,answer_relevance,context_relevance,faithfulness
+What is TCP?,5,5,5
+What is UDP?,5,5,5
+What is DNS?,5,5,5
+What is the purpose of HTTP?,5,5,5
+What is the OSI model?,5,5,5
+What is an IP address?,5,5,5
+What is the difference between TCP and UDP?,5,5,5
+How does DNS work?,5,5,5
+What is routing?,5,5,5
+What is a network switch?,5,5,5
+What are the layers of the OSI model?,5,5,5
+What is the role of the Internet Protocol?,5,5,5
+What is packet switching?,5,5,5
+What is the TCP/IP model?,5,5,5
+How does HTTP communicate between client and server?,5,5,5
+What are the advantages of TCP?,5,5,5
+What are the characteristics of UDP?,5,5,5
+How are domain names translated into IP addresses?,5,5,5
+What is the function of a network switch?,5,5,5
+Why is the OSI model important?,5,5,5
