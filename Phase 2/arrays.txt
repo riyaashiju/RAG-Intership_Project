@@ -1,0 +1,69 @@
+test_questions = [
+
+    "What is TCP?",
+    "What is UDP?",
+    "What is DNS?",
+    "What is the purpose of HTTP?",
+    "What is the OSI model?",
+
+    "What is an IP address?",
+    "What is the difference between TCP and UDP?",
+    "How does DNS work?",
+    "What is routing?",
+    "What is a network switch?",
+
+    # "What are the layers of the OSI model?",
+    # "What is the role of the Internet Protocol?",
+    # "What is packet switching?",
+    # "What is the TCP/IP model?",
+    # "How does HTTP communicate between client and server?",
+    # "What are the advantages of TCP?",
+    # "What are the characteristics of UDP?",
+    # "How are domain names translated into IP addresses?",
+    # "What is the function of a network switch?",
+    # "Why is the OSI model important?"
+]
+
+ground_truths = [
+
+    "TCP is a reliable connection-oriented transport layer protocol that ensures ordered, error-checked, and complete delivery of data between applications.",
+
+    "UDP is a connectionless transport layer protocol that provides fast communication without guaranteeing delivery, ordering, or error recovery.",
+
+    "DNS is a hierarchical naming system that translates human-readable domain names into numerical IP addresses used by computers.",
+
+    "HTTP is an application layer protocol used for communication between web clients and servers and for transferring web resources.",
+
+    "The OSI model is a seven-layer networking framework that standardizes communication functions and helps understand network operations.",
+
+    "An IP address is a numerical identifier assigned to a device on a network that enables communication using the Internet Protocol.",
+
+    "TCP is connection-oriented and reliable, while UDP is connectionless and faster but does not guarantee delivery or ordering of data.",
+
+    "DNS works by resolving domain names into IP addresses through a distributed hierarchy of DNS servers and resource records.",
+
+    "Routing is the process of selecting the best path for forwarding packets between networks from a source to a destination.",
+
+    "A network switch is a networking device that connects devices within a local area network and forwards data to the correct destination.",
+
+    #"The OSI model consists of seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.",
+
+    #"The Internet Protocol provides logical addressing and routing functions to deliver packets across interconnected networks.",
+
+    #"Packet switching is a communication method in which data is divided into packets and transmitted independently across a network.",
+
+    #"The TCP/IP model is a networking architecture that consists of layers responsible for communication across the Internet.",
+
+    #"HTTP uses a request-response mechanism in which clients send requests to servers and servers return responses containing resources or information.",
+
+    #"TCP provides reliable communication, error detection, flow control, congestion control, and ordered delivery of data.",
+
+    #"UDP is lightweight, connectionless, has low overhead, and is commonly used for real-time applications such as streaming and gaming.",
+
+    #"Domain names are translated into IP addresses through DNS resolution, where DNS servers return the corresponding address records.",
+
+    #"A network switch forwards frames based on MAC addresses and enables efficient communication between devices in a local network.",
+
+    #"The OSI model is important because it provides a standardized framework for understanding, designing, troubleshooting, and implementing network communications."
+
+]
