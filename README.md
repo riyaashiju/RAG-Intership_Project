@@ -1,43 +1,45 @@
-# RAG Internship Project
+# PG Internship – Retrieval-Augmented Generation (RAG) Project
 
-This repository contains my internship work for building a Retrieval-Augmented Generation (RAG) chatbot system using:
+This repository contains the work completed during my PG Internship on Retrieval-Augmented Generation (RAG). The project demonstrates the complete development lifecycle of a RAG-based networking chatbot, from document processing to deployment.
 
-* Groq LLMs
-* Gemini Embeddings
-* LangGraph
-* ChromaDB
-* Streamlit
+## Repository Structure
 
-## Phase 1 Progress
+- Phase 1 – Environment Setup & Embeddings
+- Phase 2 – Document Processing & Vector Database
+- Phase 4 – Better Chunking & Hybrid Search
+- Deployment – Streamlit Web Application
 
-### Completed Tasks
+## Features
 
-* Groq API configured and tested successfully
-* Gemini API configured successfully
-* Google Colab environment setup completed
-* GitHub repository setup completed
-* Generated embeddings for 20 sentences
-* Generated query embeddings
-* Implemented cosine similarity search
-* Implemented top-5 similarity retrieval
-* Explored semantic similarity using embeddings
-* Created a short note on RAG and its usefulness
-* Designed the RAG pipeline architecture using Excalidraw
-* Selected LangGraph as the development framework
+- Retrieval-Augmented Generation (RAG)
+- Gemini Embeddings
+- ChromaDB Vector Database
+- BM25 Hybrid Search
+- Better Chunking
+- LangGraph Workflow
+- Groq Llama 3.3 70B
+- Streamlit Deployment
 
-### Key Learnings
+## Live Demo
 
-* Understanding of embeddings and vector representations
-* Semantic similarity using cosine similarity
-* Query retrieval using embedding search
-* Basics of Retrieval-Augmented Generation (RAG)
-* API integration using Groq and Gemini
-* GitHub project management and documentation
+**Streamlit App:**
+https://rag-intershipproject-cn9xkspxodzwahfwuukgdv.streamlit.app/
 
-## Internship Start Date
+## GitHub Repository
 
-02 June 2026
+https://github.com/riyaashiju/RAG-Intership_Project
 
-## Mentor
+## Technologies Used
 
-Ajith Hariharan
+- Python
+- Streamlit
+- LangGraph
+- ChromaDB
+- Google Gemini API
+- Groq API
+- BM25
+- Git & GitHub
+
+## Author
+
+**Riya Shiju**
