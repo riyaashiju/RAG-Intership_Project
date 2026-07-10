@@ -1,74 +1,48 @@
 """
-Networking RAG - Streamlit Application
+Networking RAG - Streamlit Chat Application
 """
-
 import streamlit as st
 from rag_pipeline import ask_network_question
 
-# Page Configuration
+st.set_page_config(page_title="Networking AI Assistant",page_icon="🌐",layout="wide")
 
-st.set_page_config(
-    page_title="Networking RAG Chatbot",
-    page_icon="🌐",
-    layout="wide"
-)
+with st.sidebar:
+    st.title("🌐 Networking AI")
+    st.write("Ask networking-related questions and receive context-aware answers from the networking knowledge base.")
+    st.divider()
+    st.subheader("💡 Example Questions")
+    st.markdown("- What is DNS?\n- Difference between TCP and UDP?\n- Explain the OSI Model.\n- What is HTTP?\n- What is a router?\n- What is subnetting?")
+    st.divider()
+    if st.button("🗑️ New Chat",use_container_width=True):
+        st.session_state.messages=[]
+        st.rerun()
+    st.caption("Responses are generated only from the networking knowledge base.")
 
-# Header
+st.title("🌐 Networking AI Assistant")
+st.caption("Ask any networking-related question.")
 
-st.title("🌐 Networking RAG Chatbot")
+if "messages" not in st.session_state:
+    st.session_state.messages=[{"role":"assistant","content":"👋 Hello! I'm your Networking AI Assistant.\n\nAsk me anything about computer networking."}]
 
-st.markdown("""
-This chatbot answers networking-related questions using:
+for m in st.session_state.messages:
+    with st.chat_message(m["role"],avatar="🤖" if m["role"]=="assistant" else "👤"):
+        st.markdown(m["content"])
 
-- ✅ Better Chunking
-- ✅ Hybrid Search (ChromaDB + BM25)
-- ✅ LangGraph Workflow
-- ✅ Groq Llama 3.3 70B
-""")
+prompt=st.chat_input("Type your networking question...")
 
-st.divider()
-
-# Question Input
-
-question = st.text_input(
-    "Enter your networking question:",
-    placeholder="Example: What is the purpose of DNS?"
-)
-
-# Button
-
-if st.button("🚀 Get Answer", use_container_width=True):
-
-    if question.strip() == "":
-
-        st.warning("Please enter a question.")
-
-    else:
-
-        with st.spinner("Searching the knowledge base..."):
-
-            result = ask_network_question(question)
-
-        st.success("Answer generated successfully!")
-
-        st.subheader("📖 Answer")
-
-        st.write(result["answer"])
-
-        with st.expander("📄 Retrieved Chunks"):
-
-            for i, chunk in enumerate(result["sources"], start=1):
-
-                st.markdown(f"### Chunk {i}")
-
-                st.write(chunk)
-
-                st.divider()
-
-# Footer
-
-st.markdown("---")
-
-st.caption(
-    "Networking RAG | Phase 4 | Better Chunking + Hybrid Search + LangGraph"
-)
+if prompt:
+    st.session_state.messages.append({"role":"user","content":prompt})
+    with st.chat_message("user",avatar="👤"):
+        st.markdown(prompt)
+    with st.chat_message("assistant",avatar="🤖"):
+        with st.spinner("Generating response..."):
+            result=ask_network_question(prompt)
+            answer=result["answer"]
+            st.markdown(answer)
+            if result.get("sources"):
+                with st.expander("🔍 View Retrieved Context"):
+                    for i,chunk in enumerate(result["sources"],1):
+                        st.markdown(f"**Context {i}**")
+                        st.write(chunk)
+                        st.divider()
+    st.session_state.messages.append({"role":"assistant","content":answer})
