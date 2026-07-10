@@ -12,19 +12,23 @@ from groq import Groq
 from rank_bm25 import BM25Okapi
 from langgraph.graph import StateGraph, START, END
 import streamlit as st
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 gemini_client=genai.Client(api_key=GEMINI_API_KEY)
 groq_client=Groq(api_key=GROQ_API_KEY)
 
-with open("improved_chunks.pkl","rb") as f:
+with open(BASE_DIR / "improved_chunks.pkl", "rb") as f:
     improved_chunks=pickle.load(f)
-
-with open("improved_embeddings.pkl","rb") as f:
+with open(BASE_DIR / "improved_embeddings.pkl", "rb") as f:
     improved_embeddings=pickle.load(f)
 
-chroma_client=chromadb.PersistentClient(path="./networking_chromadb_phase4")
+chroma_client = chromadb.PersistentClient(
+    path=str(BASE_DIR / "networking_chromadb_phase4")
+)
 collection=chroma_client.get_or_create_collection(name="networking_docs_phase4")
 
 tokenized_chunks=[c.lower().split() for c in improved_chunks]
